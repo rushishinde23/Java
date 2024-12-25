@@ -2,7 +2,7 @@ package MultiThreading.synchronization;
 
 class Display{
 
-    public void wish(String name) {
+    public synchronized void wish(String name) {
 
         for(int i=0;i<5;i++){
             System.out.print("Good morning : ");
@@ -10,7 +10,9 @@ class Display{
             try {
                 Thread.sleep(1000);
             }
-            catch (InterruptedException e){}
+            catch (InterruptedException e){
+                System.out.println("I got interrupted");
+            }
 
          }
     }
@@ -35,13 +37,17 @@ public class SynchronizedMethodDemo {
     public static void main(String[] args) {
 
         Display d=new Display();
-        MyThread1 t1=new MyThread1(d,"Rushi");
+        MyThread1 t1=new MyThread1(d,"Krishna");
         MyThread1 t2=new MyThread1(d,"Dhoni");
         MyThread1 t3=new MyThread1(d,"Yuvraj");
+        MyThread1 t4=new MyThread1(d,"Rushi");
+
+
 
         t1.start();
         t2.start();
         t3.start();
+        t4.start();
 
     }
 }
