@@ -27,6 +27,8 @@ public class CollectionOperations {
         list.add("Rajesh");
         list.add("Shivani");
 
+
+
         System.out.println(list);
         List<String> listStartsWithA=new ArrayList<>();
         for(String s:list){
@@ -44,6 +46,8 @@ public class CollectionOperations {
 
 
         System.out.println(listStartsWithA);
+
+
 
 
 
