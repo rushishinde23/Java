@@ -1,4 +1,6 @@
 package MultiThreading.threadCreation;
+import java.lang.Object;
+
 
 class MyThread extends Thread{
 

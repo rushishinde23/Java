@@ -1,7 +1,13 @@
 package collection.hashMapQuestions;
 
 
-public class MapCollection {
+import java.lang.annotation.ElementType;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+
+public class
+MapCollection {
 
     public static void main(String[] args) {
 
@@ -15,7 +21,29 @@ public class MapCollection {
 //        System.out.println(hashMap.get(e2));
 
 
+        Map<Integer,String> hashMap=new HashMap<>();
+
+        hashMap.put(2,"rushi");
+        hashMap.put(1,"java");
+        hashMap.put(3,"digvijay");
+        hashMap.put(4,"angad");
+        hashMap.put(2,"tukaram");
+
+
+        Iterator itr= hashMap.entrySet().iterator();
+
+        while(itr.hasNext()){
+            System.out.println(itr.next());
+            //itr.remove();
+        }
+
+        for(Map.Entry<Integer,String>e:hashMap.entrySet()){
+            System.out.println(e);
+        }
 
 
     }
+
+
+
 }
